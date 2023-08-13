@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="margin: 0%;background: cornflowerblue;">
+    <button class="chatbot_toggle">
+        <span class="fa fa-envelope-o"></span>
+        <span class="fa fa-close"></span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <span class="fa fa-close close"></span>
+        </header>
+        <div class="chatbox" id="chatbox">
+            <div class="income chat">
+                <span class="bot">&#129302;</span> 
+                <p class="botsay">Hi there &#128075; How can I help you today?</p>
+            </div>
+            <!--
+                <div class="output chat">
+                <p class="mesay">Lorem ipsum dolor sit, amet consectetur adipisicing. </p>
+            </div>
+            -->
+            
+        </div>
+        <div class="textbox">
+            <textarea placeholder="Enter a massage..." required id="text"></textarea>
+            <span class="fa fa-paper-plane-o" id="send"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

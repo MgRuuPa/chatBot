@@ -1,0 +1,152 @@
+
+.chatbot_toggle{
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background-color: slateblue;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.show_chatbot .chatbot_toggle{
+    transform: rotate(90deg);
+}
+.chatbot_toggle span{
+    position: absolute;
+    font-size: 1.5rem;
+}
+.show_chatbot .chatbot_toggle span:first-child,
+.chatbot_toggle span:last-child{
+    opacity: 0;
+}
+.show_chatbot .chatbot_toggle span:last-child{
+    opacity: 1;
+}
+.chatbot{
+    position: fixed;
+    right: 100px;
+    bottom: 40px;
+    width: 420px;
+    overflow: hidden;
+    background: white;
+    border-radius: 15px;
+    transform: scale(o.5);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.show_chatbot .chatbot{
+    transform: 1;
+    pointer-events: auto;
+    opacity: 1;
+}
+.chatbot header{
+    background-color: slateblue;
+    padding: 16px 0;
+    text-align: center;
+    position: relative;
+}
+.chatbot header h2{
+    color: white;
+    font-size: 1.4rem;
+}
+.chatbot header span{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: none;
+}
+.chatbot .chatbox{
+    height:410px;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 1px;
+    
+}
+.chatbox .chat{
+    display: flex;
+}
+.chatbox .output{
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+.chatbox .chat p{
+    max-width: 55%;
+    white-space: wrap;
+}
+.chatbox .chat p.error{
+    color: red;
+}
+.chatbox .chat .botsay{
+    background-color:whitesmoke;
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+}
+.chatbox .chat .mesay{
+    background: slateblue;
+    padding: 10px;
+    color: white;
+    border-radius: 10px 10px 0 10px;
+    margin-right: 5px;
+    text-align: end;
+    
+}
+
+/*this is text box*/
+.textbox{
+    display: flex;
+    align-items: center;
+}
+.chatbot .textbox{
+    position: relative;
+    bottom: 0px;
+    border-top: 1px solid black;
+    width: 100%;
+    gap: 5px;
+}
+.textbox textarea{
+    border: none;
+    outline: none;
+    padding: 15px;
+    resize: none;
+    width: 80%;
+    height: 25px;
+    font-size: 1rem;
+}
+.textbox span{
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    visibility: hidden;
+    margin-left: 2%;
+}
+.textbox textarea:valid ~ span{
+    visibility: visible;
+}
+
+@media (max-width:550px) {
+    .chatbot{
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+    .chatbot .chatbox{
+        height: 70%;
+    }
+    .chatbot header span{
+        display: block;
+    }
+}
